@@ -17,76 +17,94 @@
         <legend>Dados de Identificação</legend>
 
         <label for="Nome Completo">Nome Completo</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" class="input" id="nome">
+        <span class="erro-mensagem" id="erro-nome"></span>
 
         <label for="Data de Nascimento">Data de Nascimento</label>
-        <input type="date" name="" id="">
+        <input type="date" name="" class="input" id="data">
+        <span class="erro-mensagem" id="erro-data"></span>
         
         <label for="CPF">CPF</label>
-        <input type="number" name="" id="">
+        <input type="tel" name="" minlength="11" maxlength="11" class="input" id="cpf">
+        <span class="erro-mensagem" id="erro-cpf"></span>
+        
         <legend> Qual seu gênero?</legend>
         <label for="Masculino">
-          <input type="radio" id="" name="genero" value="1">
+          <input type="radio" class="input" name="genero" value="1">
           Masculino
         </label>
         <label for="Feminino">
-          <input type="radio" id="" name="genero" value="2">
+          <input type="radio" class="input" name="genero" value="2">
           Feminino
         </label>
         <label for="Outro">
-          <input type="radio" id="" name="genero" value="3">
+          <input type="radio" class="input" name="genero" value="3">
           Outro
         </label>
+        <span class="erro-mensagem" id="erro-genero"></span>
         </fieldset>
 
         <fieldset>
         <legend>Dados de Contato</legend>
         <label for="E-mail">E-mail</label>
-        <input type="email" name="" id="">
+        <input type="email" name="" class="input" id="email">
+        <span class="erro-mensagem" id="erro-email"></span>
 
         <label for="Número de Telefone">Número de Telefone</label>
-        <input type="number" name="" id="">
+        <input type="tel" name="" inputmode="numeric" minlength="11" maxlength="11" class="input" id="telefone">
+        <span class="erro-mensagem" id="erro-telefone"></span>
       </fieldset>
       <fieldset>
         <legend>Dados de Endereço</legend>
 
         <label for="Rua">Rua</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" class="input" id="rua">
+        <span class="erro-mensagem" id="erro-rua"></span>
+        
         <label for="Bairro">Bairro</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" class="input" id="bairro">
+        <span class="erro-mensagem" id="erro-bairro"></span>
+        
         <label for="Cidade">Cidade</label>
-        <input type="text" name="" id="">
+        <input type="text" name="" class="input" id="cidade">
+        <span class="erro-mensagem" id="erro-cidade"></span>
 
         <label for="">Estado</label>
-        <select name="Estado" id="">
-          <option value="" name="Acre">Acre</option>
-          <option value="" name="Alagoas">Alagoas</option>
-          <option value="" name="Amapá">Amapá</option>
-          <option value="" name="Amazonas">Amazonas</option>
-          <option value="" name="Bahia">Bahia</option>
-          <option value="" name="Ceará">Ceará</option>
-          <option value="" name="Espírito Santo">Espírito Santo</option>
-          <option value="" name="Goiás">Goiás</option>
-          <option value="" name="Maranhão">Maranhão</option>
-          <option value="" name="Mato Grosso">Mato Grosso</option>
-          <option value="" name="Mato Grosso do Sul">Mato Grosso do Sul</option>
-          <option value="" name="Minas Gerais">Minas Gerais</option>
-          <option value="" name="Pará">Pará</option>
-          <option value="" name="Paraíba">Paraíba</option>
-          <option value="" name="Paraná">Paraná</option>
-          <option value="" name="Pernambuco">Pernambuco</option>
-          <option value="" name="Piauí">Piauí</option>
-          <option value="" name="Rio de Janeiro">Rio de Janeiro</option>
-          <option value="" name="Rio Grande do Norte">Rio Grande do Norte</option>
-          <option value="" name="Rio Grande do Sul">Rio Grande do Sul</option>
-          <option value="" name="Rondônia">Rondônia</option>
-          <option value="" name="Roraima">Roraima</option>
-          <option value="" name="Santa Catarina">Santa Catarina</option>
-          <option value="" name="São Paulo">São Paulo</option>
-          <option value="" name="Sergipe">Sergipe</option>
-          <option value="" name="Tocantins">Tocantins</option>
+        <select name="Estado" class="input" id="estado">
+          <option value="">Selecione um estado</option>
+          <option value="ac">Acre</option>
+          <option value="al">Alagoas</option>
+          <option value="ap">Amapá</option>
+          <option value="am">Amazonas</option>
+          <option value="ba">Bahia</option>
+          <option value="ce">Ceará</option>
+          <option value="es">Espírito Santo</option>
+          <option value="go">Goiás</option>
+          <option value="ma">Maranhão</option>
+          <option value="mt">Mato Grosso</option>
+          <option value="ms">Mato Grosso do Sul</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="pa">Pará</option>
+          <option value="pb">Paraíba</option>
+          <option value="pr">Paraná</option>
+          <option value="pe">Pernambuco</option>
+          <option value="pi">Piauí</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="rn">Rio Grande do Norte</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="ro">Rondônia</option>
+          <option value="rr">Roraima</option>
+          <option value="sc">Santa Catarina</option>
+          <option value="sp">São Paulo</option>
+          <option value="se">Sergipe</option>
+          <option value="to">Tocantins</option>
         </select>
+        <span class="erro-mensagem" id="erro-estado"></span>
       </fieldset>
+      <div class="botao">
+        <button type="button" onclick="verificar()">Enviar Formulário</button>
+        <button type="button" onclick="limparInput()">Limpar Formulário</button>
+      </div>
     </form>
   </div>
 </body>
