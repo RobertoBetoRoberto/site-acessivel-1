@@ -27,20 +27,21 @@
         <label for="CPF">CPF</label>
         <input type="tel" name="" minlength="11" maxlength="11" class="input" id="cpf">
         <span class="erro-mensagem" id="erro-cpf"></span>
-        
-        <legend> Qual seu gênero?</legend>
-        <label for="Masculino">
-          <input type="radio" class="input" name="genero" value="1">
-          Masculino
-        </label>
-        <label for="Feminino">
-          <input type="radio" class="input" name="genero" value="2">
-          Feminino
-        </label>
-        <label for="Outro">
-          <input type="radio" class="input" name="genero" value="3">
-          Outro
-        </label>
+        </fieldset>
+        <fieldset>
+          <legend> Qual seu gênero?</legend>
+          <label for="Masculino">
+            <input type="radio" class="input" name="genero" value="1">
+            Masculino
+          </label>
+          <label for="Feminino">
+            <input type="radio" class="input" name="genero" value="2">
+            Feminino
+          </label>
+          <label for="Outro">
+            <input type="radio" class="input" name="genero" value="3">
+            Outro
+          </label>
         <span class="erro-mensagem" id="erro-genero"></span>
         </fieldset>
 
@@ -101,7 +102,7 @@
         </select>
         <span class="erro-mensagem" id="erro-estado"></span>
       </fieldset>
-      <div class="botao">
+      <div class="area-botao">
         <button type="button" onclick="verificar()">Enviar Formulário</button>
         <button type="button" onclick="limparInput()">Limpar Formulário</button>
       </div>
